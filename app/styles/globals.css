@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Define brand colors */
+:root {
+  --color-background: #000000; /* Black */
+  --color-surface: #1A1A1A;    /* Charcoal for surfaces like cards, sections */
+  --color-text-primary: #FFFFFF; /* White */
+  --color-text-secondary: #A0A0A0; /* Light Gray for less important text */
+  --color-accent: #C00000;      /* Blood Red */
+  --color-accent-hover: #A00000; /* Darker Blood Red for hover */
+
+  /* Define Font Families */
+  --font-serif: "Merriweather", serif;
+  --font-sans: "Montserrat", sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+}
+
+h1, h2, h3, h4, .font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.bg-base {
+  background-color: var(--color-background);
+}
+
+.bg-surface {
+  background-color: var(--color-surface);
+}
+
+.text-primary {
+  color: var(--color-text-primary);
+}
+
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+
+.accent-color {
+  color: var(--color-accent);
+}
+
+.accent-bg {
+  background-color: var(--color-accent);
+}
+
+.accent-bg-hover:hover {
+  background-color: var(--color-accent-hover);
+}
+
+.accent-text-hover:hover {
+  color: var(--color-accent-hover);
+}
+
+.accent-border {
+  border-color: var(--color-accent);
+}
+
+.btn-primary {
+  @apply py-3 px-6 text-lg font-semibold rounded-md shadow-md transition-colors duration-300;
+}
+
+.btn-accent {
+  @apply btn-primary text-white accent-bg accent-bg-hover;
+}
+
+/* Specific styles for rugged look if needed */
+.hero-bg {
+  background-color: var(--color-surface); /* Using surface color for hero */
+}
+
+/* Tailwind prose overrides for custom fonts and colors */
+.prose {
+  color: var(--color-text-secondary);
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+  font-family: var(--font-serif);
+  color: var(--color-text-primary);
+}
+
+.prose strong {
+ color: var(--color-text-primary);
+}
+
+.prose a {
+  color: var(--color-accent);
+}
+
+.prose a:hover {
+  color: var(--color-accent-hover);
+}
+
